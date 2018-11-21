@@ -8,6 +8,43 @@
 
 #import "ViewController.h"
 #import "ImageLoader.h"
+//#import "ProtocolExtension.h"
+
+//@protocol Test <NSObject>
+//
+//- (void)jump;
+//
+//- (void)fly;
+//
+//@end
+//
+//@extension(Test)
+//
+//- (void)jump{
+//    NSLog(@"%@ jump ----", [self classForCoder]);
+//}
+//
+//- (void)fly{}
+//
+//@extEnd
+
+
+//@interface TestPerson : NSObject <Test>
+//
+//@end
+//
+//@implementation TestPerson
+
+//- (void)fly{
+//    NSLog(@"----------object implement fly-------");
+//}
+
+
+//@end
+
+
+
+
 
 @interface ViewController ()
 
@@ -20,13 +57,18 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     NSSet *customClasses = [ImageLoader customClassNames];
-    NSLog(@"custom classes : %@  count: %ld \n", customClasses, customClasses.count);
+    NSLog(@"custom classes : %@ \n count: %ld \n", customClasses, customClasses.count);
     
     NSSet *allClasses = [ImageLoader allBundleClassNames];
-    NSLog(@"all classes : %@  count: %ld \n", allClasses, allClasses.count);
+    NSLog(@"all classes : %@ \n count: %ld \n", allClasses, allClasses.count);
     
     NSSet *mainBundleClasses = [ImageLoader mainBundleClassNames];
-    NSLog(@"main bundle classes : %@  count: %ld \n", mainBundleClasses, mainBundleClasses.count);
+    NSLog(@"main bundle classes : %@ \n count: %ld \n", mainBundleClasses, mainBundleClasses.count);
+    
+//
+//    TestPerson *person = [[TestPerson alloc] init];
+//    [person jump];
+
 }
 
 

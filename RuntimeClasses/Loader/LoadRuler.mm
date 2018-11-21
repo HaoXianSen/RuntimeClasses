@@ -23,7 +23,7 @@ static void AppendAllImagePaths(std::vector<std::string> & image_paths){
 
 
 // 打印所有加载的macho path
-static void PrintAllImagePaths(){
+__attribute__((unused )) static void PrintAllImagePaths(){
     std::vector<std::string> image_paths;
     AppendAllImagePaths(image_paths);
     for(auto path: image_paths){
