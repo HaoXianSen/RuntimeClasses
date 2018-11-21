@@ -198,35 +198,35 @@ static void _protocol_extension_inject_to_class(Class targetClass, PEExtendedPro
 
 
 //在main函数调用之前
-//__attribute__((constructor)) static void _protocol_extension_inject_entry(){
-//    
-//    lock();
-//    //获取当前内存中所有的类
-//    unsigned count;
-//    Class *allClasses = objc_copyClassList(&count);
-//    
-//    @autoreleasepool {
-//        for (unsigned protocolIndex = 0; protocolIndex < extendedProtocolCount; protocolIndex++) {
-//            PEExtendedProtocol extendProtocol = allExtenedProtocols[protocolIndex];
-//            for (unsigned classIndex = 0; classIndex < count; classIndex++) {
-//                Class class = allClasses[classIndex];
-//                if(!class_conformsToProtocol(class, extendProtocol.protocol)){
-//                    continue;
-//                }
-//                _protocol_extension_inject_to_class(class, extendProtocol);
-//            }
-//        }
-//    }
-//    
-//    unlock();
-//    
-//    free(allClasses);
-//    free(allExtenedProtocols);
-//    extendedProtocolCount = 0;
-//    extenedProtocolCapacity = 0;
-//    loadingLock = NULL;
-//    
-//}
+__attribute__((constructor)) static void _protocol_extension_inject_entry(){
+    
+    lock();
+    //获取当前内存中所有的类
+    unsigned count;
+    Class *allClasses = objc_copyClassList(&count);
+    
+    @autoreleasepool {
+        for (unsigned protocolIndex = 0; protocolIndex < extendedProtocolCount; protocolIndex++) {
+            PEExtendedProtocol extendProtocol = allExtenedProtocols[protocolIndex];
+            for (unsigned classIndex = 0; classIndex < count; classIndex++) {
+                Class class = allClasses[classIndex];
+                if(!class_conformsToProtocol(class, extendProtocol.protocol)){
+                    continue;
+                }
+                _protocol_extension_inject_to_class(class, extendProtocol);
+            }
+        }
+    }
+    
+    unlock();
+    
+    free(allClasses);
+    free(allExtenedProtocols);
+    extendedProtocolCount = 0;
+    extenedProtocolCapacity = 0;
+    loadingLock = NULL;
+    
+}
 
 
 

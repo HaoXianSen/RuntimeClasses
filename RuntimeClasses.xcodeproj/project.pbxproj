@@ -15,7 +15,7 @@
 		DA94B122219D1CF40082E1C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA94B121219D1CF40082E1C1 /* main.m */; };
 		DA94B12D219D1D810082E1C1 /* ImageLoader.mm in Sources */ = {isa = PBXBuildFile; fileRef = DA94B129219D1D810082E1C1 /* ImageLoader.mm */; };
 		DA94B12E219D1D810082E1C1 /* LoadRuler.mm in Sources */ = {isa = PBXBuildFile; fileRef = DA94B12B219D1D810082E1C1 /* LoadRuler.mm */; };
-		DA94B21021A4F83D0082E1C1 /* ProtocolExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA94B20F21A4F83D0082E1C1 /* ProtocolExtension.m */; };
+		DA94B21C21A54DF20082E1C1 /* ProtocolExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA94B21A21A54DF20082E1C1 /* ProtocolExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +33,8 @@
 		DA94B12A219D1D810082E1C1 /* ImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLoader.h; sourceTree = "<group>"; };
 		DA94B12B219D1D810082E1C1 /* LoadRuler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LoadRuler.mm; sourceTree = "<group>"; };
 		DA94B12C219D1D810082E1C1 /* LoadRuler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadRuler.h; sourceTree = "<group>"; };
-		DA94B20F21A4F83D0082E1C1 /* ProtocolExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProtocolExtension.m; sourceTree = "<group>"; };
-		DA94B21121A4F8500082E1C1 /* ProtocolExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProtocolExtension.h; sourceTree = "<group>"; };
+		DA94B21A21A54DF20082E1C1 /* ProtocolExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolExtension.m; sourceTree = "<group>"; };
+		DA94B21B21A54DF20082E1C1 /* ProtocolExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolExtension.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 		DA94B111219D1CF30082E1C1 /* RuntimeClasses */ = {
 			isa = PBXGroup;
 			children = (
-				DA94B20E21A4F8150082E1C1 /* ProtocolExtension */,
+				DA94B21921A54DF20082E1C1 /* ProtocolExtension */,
 				DA94B128219D1D6B0082E1C1 /* Loader */,
 				DA94B112219D1CF30082E1C1 /* AppDelegate.h */,
 				DA94B113219D1CF30082E1C1 /* AppDelegate.m */,
@@ -93,11 +93,11 @@
 			path = Loader;
 			sourceTree = "<group>";
 		};
-		DA94B20E21A4F8150082E1C1 /* ProtocolExtension */ = {
+		DA94B21921A54DF20082E1C1 /* ProtocolExtension */ = {
 			isa = PBXGroup;
 			children = (
-				DA94B21121A4F8500082E1C1 /* ProtocolExtension.h */,
-				DA94B20F21A4F83D0082E1C1 /* ProtocolExtension.m */,
+				DA94B21B21A54DF20082E1C1 /* ProtocolExtension.h */,
+				DA94B21A21A54DF20082E1C1 /* ProtocolExtension.m */,
 			);
 			path = ProtocolExtension;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA94B12E219D1D810082E1C1 /* LoadRuler.mm in Sources */,
-				DA94B21021A4F83D0082E1C1 /* ProtocolExtension.m in Sources */,
+				DA94B21C21A54DF20082E1C1 /* ProtocolExtension.m in Sources */,
 				DA94B12D219D1D810082E1C1 /* ImageLoader.mm in Sources */,
 				DA94B117219D1CF30082E1C1 /* ViewController.m in Sources */,
 				DA94B122219D1CF40082E1C1 /* main.m in Sources */,

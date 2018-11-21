@@ -8,39 +8,65 @@
 
 #import "ViewController.h"
 #import "ImageLoader.h"
-//#import "ProtocolExtension.h"
+#import "ProtocolExtension.h"
 
-//@protocol Test <NSObject>
-//
-//- (void)jump;
-//
-//- (void)fly;
-//
-//@end
-//
-//@extension(Test)
-//
-//- (void)jump{
-//    NSLog(@"%@ jump ----", [self classForCoder]);
-//}
-//
-//- (void)fly{}
-//
-//@extEnd
+@protocol Test <NSObject>
+
+- (void)jump;
+
+- (void)fly;
+
+@end
+
+@extension(Test)
+
+- (void)jump{
+    NSLog(@"%@ jump ----", [self classForCoder]);
+}
+
+- (void)fly{
+    NSLog(@"%@ fly ----", [self classForCoder]);
+}
+
+@extEnd
 
 
-//@interface TestPerson : NSObject <Test>
-//
-//@end
-//
-//@implementation TestPerson
+@interface TestPerson : NSObject <Test>
+
+@end
+
+@implementation TestPerson
 
 //- (void)fly{
 //    NSLog(@"----------object implement fly-------");
 //}
+//
+//
+//- (void)jump{
+//    NSLog(@"----------object implement jump-------");
+//}
 
 
-//@end
+@end
+
+
+@interface TestBird : NSObject <Test>
+
+@end
+
+@implementation TestBird
+
+//- (void)fly{
+//    NSLog(@"----------object implement fly-------");
+//}
+//
+//
+//- (void)jump{
+//    NSLog(@"----------object implement jump-------");
+//}
+
+
+@end
 
 
 
@@ -65,9 +91,15 @@
     NSSet *mainBundleClasses = [ImageLoader mainBundleClassNames];
     NSLog(@"main bundle classes : %@ \n count: %ld \n", mainBundleClasses, mainBundleClasses.count);
     
-//
-//    TestPerson *person = [[TestPerson alloc] init];
-//    [person jump];
+
+    TestPerson *person = [[TestPerson alloc] init];
+    [person jump];
+    [person fly];
+    
+    
+    TestBird *bird = [[TestBird alloc] init];
+    [bird jump];
+    [bird fly];
 
 }
 
